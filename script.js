@@ -26,3 +26,21 @@ function getHumanChoice(humanPlay) {
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+  if(humanChoice == computerChoice) {
+    return "It's a tie!";
+  } else if(humanChoice == "rock" && computerChoice == "scissors") {
+    humanScore++;
+    return "Rock beats scissors! You win.";
+  } else if(humanChoice == "scissors" && computerChoice == "paper") {
+    humanScore++;
+    return "Scissors beats paper! You win."
+  } else if(humanChoice == "paper" && computerChoice == "rock") {
+    humanScore++;
+    return "Paper beats rock! You win."
+  } else {
+    computerScore++;
+    return "Sorry! You lose.";
+  }
+}
